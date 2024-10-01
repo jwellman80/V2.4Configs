@@ -41,18 +41,18 @@ env = ~/.KlipperScreen-env/bin/python
 requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 
-[update_manager beacon]
+[update_manager cartographer]
 type = git_repo
+path = ~/cartographer-klipper
 channel = dev
-path = ~/beacon_klipper
-origin = https://github.com/beacon3d/beacon_klipper.git
+origin = https://github.com/Cartographer3D/cartographer-klipper.git
 env = ~/klippy-env/bin/python
 requirements = requirements.txt
 install_script = install.sh
 is_system_service = False
 managed_services = klipper
 info_tags = 
-	desc=Beacon Surface Scanner
+	desc=Cartographer Probe
 
 [update_manager crowsnest]
 type = git_repo
