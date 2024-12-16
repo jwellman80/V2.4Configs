@@ -32,7 +32,7 @@ mainsail_folder=~/mainsail
 
 ### The branch of the repository that you want to save your config
 ### By default that is 'main'
-branch=stealthchanger_alpha
+branch=stealthchanger-alpha
 
 db_file=~/printer_data/database/moonraker-sql.db
 
