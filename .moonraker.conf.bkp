@@ -10,7 +10,10 @@ enable_object_processing = True
 [authorization]
 cors_domains = 
 	*://my.mainsail.xyz
-	*://*.local
+	*.local
+	*.local:*
+	*://localhost
+	*://localhost:*
 	*://*.lan
 trusted_clients = 
 	10.0.0.0/8
@@ -41,18 +44,13 @@ env = ~/.KlipperScreen-env/bin/python
 requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 
-[update_manager cartographer]
+[update_manager klipper-toolchanger-easy]
 type = git_repo
-path = ~/cartographer-klipper
 channel = dev
-origin = https://github.com/Cartographer3D/cartographer-klipper.git
-env = ~/klippy-env/bin/python
-requirements = requirements.txt
-install_script = install.sh
-is_system_service = False
+path = ~/klipper-toolchanger-easy
+origin = https://github.com/jwellman80/klipper-toolchanger-easy.git
 managed_services = klipper
-info_tags = 
-	desc=Cartographer Probe
+primary_branch = main
 
 [update_manager crowsnest]
 type = git_repo
@@ -61,21 +59,37 @@ origin = https://github.com/mainsail-crew/crowsnest.git
 managed_services = crowsnest
 install_script = tools/pkglist.sh
 
-[update_manager happy-hare]
-type = git_repo
-path = ~/Happy-Hare
-origin = https://github.com/moggieuk/Happy-Hare.git
-primary_branch = main
-install_script = install.sh
-managed_services = klipper
-
-[mmu_server]
-enable_file_preprocessor = True
-enable_toolchange_next_pos = True
-
 [update_manager led_effect]
 type = git_repo
 path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
+
+[update_manager Klippain-ShakeTune]
+type = git_repo
+origin = https://github.com/Frix-x/klippain-shaketune.git
+path = ~/klippain_shaketune
+virtualenv = /home/pi/klippy-env
+requirements = requirements.txt
+system_dependencies = system-dependencies.json
+primary_branch = main
+managed_services = klipper
+
+[update_manager axiscope]
+type = git_repo
+path = /home/pi/axiscope
+origin = https://github.com/nic335/Axiscope.git
+primary_branch = main
+is_system_service = True
+managed_services = axiscope
+
+[update_manager afc-software]
+type = git_repo
+path = ~/AFC-Klipper-Add-On
+origin = https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
+managed_services = klipper
+primary_branch = main
+is_system_service = False
+info_tags = 
+	desc=AFC Klipper Add On
 
