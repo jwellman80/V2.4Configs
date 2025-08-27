@@ -33,7 +33,7 @@ refresh_interval = 168
 
 [update_manager mainsail]
 type = web
-repo = mainsail-crew/mainsail
+repo = ArmoredTurtle/mainsail-AFC
 path = ~/mainsail
 
 [update_manager KlipperScreen]
@@ -49,6 +49,14 @@ type = git_repo
 channel = dev
 path = ~/klipper-toolchanger-easy
 origin = https://github.com/jwellman80/klipper-toolchanger-easy.git
+managed_services = klipper
+primary_branch = main
+
+[update_manager klipper-toolchanger]
+type = git_repo
+channel = dev
+path = ~/klipper-toolchanger
+origin = https://github.com/viesturz/klipper-toolchanger.git
 managed_services = klipper
 primary_branch = main
 
@@ -92,4 +100,17 @@ primary_branch = main
 is_system_service = False
 info_tags = 
 	desc=AFC Klipper Add On
+
+[update_manager beacon]
+type = git_repo
+channel = dev
+path = ~/beacon_klipper
+origin = https://github.com/beacon3d/beacon_klipper.git
+env = ~/klippy-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+is_system_service = False
+managed_services = klipper
+info_tags = 
+	desc=Beacon Surface Scanner
 
