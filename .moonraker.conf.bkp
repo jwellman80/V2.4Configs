@@ -7,6 +7,9 @@ klippy_uds_address = ~/printer_data/comms/klippy.sock
 [file_manager]
 enable_object_processing = True
 
+[gcode_preprocessor]
+enable_preprocessing = True
+
 [authorization]
 cors_domains = 
 	*://my.mainsail.xyz
@@ -33,7 +36,7 @@ refresh_interval = 168
 
 [update_manager mainsail]
 type = web
-repo = ArmoredTurtle/mainsail-AFC
+repo = mainsail-crew/mainsail
 path = ~/mainsail
 
 [update_manager KlipperScreen]
@@ -49,14 +52,6 @@ type = git_repo
 channel = dev
 path = ~/klipper-toolchanger-easy
 origin = https://github.com/jwellman80/klipper-toolchanger-easy.git
-managed_services = klipper
-primary_branch = main
-
-[update_manager klipper-toolchanger]
-type = git_repo
-channel = dev
-path = ~/klipper-toolchanger
-origin = https://github.com/viesturz/klipper-toolchanger.git
 managed_services = klipper
 primary_branch = main
 
@@ -90,16 +85,6 @@ origin = https://github.com/nic335/Axiscope.git
 primary_branch = main
 is_system_service = True
 managed_services = axiscope
-
-[update_manager afc-software]
-type = git_repo
-path = ~/AFC-Klipper-Add-On
-origin = https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
-managed_services = klipper
-primary_branch = main
-is_system_service = False
-info_tags = 
-	desc=AFC Klipper Add On
 
 [update_manager beacon]
 type = git_repo
