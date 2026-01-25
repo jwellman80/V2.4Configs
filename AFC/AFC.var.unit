@@ -1,18 +1,19 @@
 {
+    "Tools": {},
     "Turtle_1": {
         "lane0": {
             "name": "lane0",
             "unit": "Turtle_1",
-            "hub": "direct_load",
+            "hub": "direct",
             "extruder": "extruder",
             "buffer": "lane0_buffer",
-            "buffer_status": "Advancing",
+            "buffer_status": "Trailing",
             "lane": 1,
             "map": "T0",
-            "load": false,
-            "prep": false,
-            "tool_loaded": false,
-            "loaded_to_hub": false,
+            "load": true,
+            "prep": true,
+            "tool_loaded": true,
+            "loaded_to_hub": true,
             "material": "",
             "density": 1.24,
             "diameter": 1.75,
@@ -22,14 +23,16 @@
             "weight": 0,
             "extruder_temp": null,
             "runout_lane": null,
-            "filament_status": "Not Ready",
-            "filament_status_led": "#ff0000",
-            "status": "None"
+            "filament_status": "In Tool",
+            "filament_status_led": "#0000ff",
+            "status": "Tooled",
+            "dist_hub": 1450.0,
+            "td1_data": {}
         },
         "lane1": {
             "name": "lane1",
             "unit": "Turtle_1",
-            "hub": "direct_load",
+            "hub": "direct",
             "extruder": "extruder1",
             "buffer": "lane1_buffer",
             "buffer_status": "Advancing",
@@ -50,12 +53,14 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 1450.0,
+            "td1_data": {}
         },
         "lane2": {
             "name": "lane2",
             "unit": "Turtle_1",
-            "hub": "direct_load",
+            "hub": "direct",
             "extruder": "extruder2",
             "buffer": "lane2_buffer",
             "buffer_status": "Advancing",
@@ -76,12 +81,14 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 1450.0,
+            "td1_data": {}
         },
         "lane3": {
             "name": "lane3",
             "unit": "Turtle_1",
-            "hub": "direct_load",
+            "hub": "direct",
             "extruder": "extruder3",
             "buffer": "lane3_buffer",
             "buffer_status": "Advancing",
@@ -102,17 +109,19 @@
             "runout_lane": null,
             "filament_status": "Not Ready",
             "filament_status_led": "#ff0000",
-            "status": "None"
+            "status": "None",
+            "dist_hub": 1450.0,
+            "td1_data": {}
         }
     },
     "system": {
-        "current_load": null,
-        "num_units": 1,
+        "current_load": "lane0",
+        "num_units": 2,
         "num_lanes": 4,
         "num_extruders": 4,
         "extruders": {
             "extruder": {
-                "lane_loaded": null
+                "lane_loaded": "lane0"
             },
             "extruder1": {
                 "lane_loaded": null
