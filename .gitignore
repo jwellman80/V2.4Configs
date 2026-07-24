@@ -3,3 +3,4 @@ adxl_results/belts/*.csv
 adxl_results/vibrations/*.tar.gz
 stealthchanger/toolchanger/**
 .moonraker.conf.bkp
+AFC/AFC.var.unit
